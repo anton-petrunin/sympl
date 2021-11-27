@@ -1,0 +1,85 @@
+\usepackage{amssymb,amsfonts,amsthm}
+\usepackage[intlimits]{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A,T1]{fontenc}
+\usepackage[english,russian]{babel}
+\usepackage{indentfirst}%+отступ в первой строке
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{bm}
+\usepackage[
+colorlinks=true,
+citecolor=black,
+linkcolor=black,
+anchorcolor=black,
+filecolor=black,
+menucolor=black,
+urlcolor=black,
+unicode=true
+]{hyperref}
+\usepackage{enumitem}
+\usepackage{geometry}
+
+\usepackage[xindy]{imakeidx}
+
+\usepackage[
+sorting=debug,
+bibencoding=auto,
+backend=biber,
+maxnames=10,
+%babel=other,
+%autolang=other,
+doi=false,
+url=false,
+style=numeric-comp,
+isbn=false]{biblatex}
+\usepackage{csquotes}
+
+\AtBeginDocument{%removes the last "and" in author field
+    \renewcommand*{\finalnamedelim}{,\space}
+}
+
+\AtEveryBibitem{\clearlist{language}}
+\AtEveryBibitem{\clearlist{note}}
+\renewbibmacro{in:}{}
+\renewcommand*{\bibfont}{\scriptsize}
+
+\addbibresource{library.bib}
+
+\DeclareFieldFormat{postnote}{#1}
+\DeclareFieldFormat{multipostnote}{#1}
+
+%\DeclareUnicodeCharacter{FEFF}{*******************************}
+
+\csname @openrightfalse\endcsname
+
+%THEOREM
+\newcounter{thm}[chapter]
+\renewcommand{\thethm}{\thesection.\Alph{thm}}
+\newcommand\claim[2][{}]{\par\medskip\noindent\refstepcounter{thm}\hbox{{\bf #2\ \thesection.\Alph{thm}.}{\ {\it #1}}}
+\it\ %\ignorespaces
+}
+\def\endclaim{
+\par\medskip}
+\newenvironment{thm}{\claim}{\endclaim}
+
+\newcommand\claimnn[2][{}]{\par\medskip\noindent\hbox{{\bf #2.}\ {\it #1}}
+\it\ %\ignorespaces
+}
+\def\endclaim{
+\par\medskip}
+\newenvironment{thm*}{\claimnn}{\endclaim}
+
+\renewcommand{\ge}{\geqslant}
+\renewcommand{\le}{\leqslant}
+\def\phi{\varphi}
+
+\newcommand*{\z}[1]{#1\nobreak\discretionary{}%
+            {\hbox{$\mathsurround=0pt #1$}}{}}
+
+
+
+
+
+
+          

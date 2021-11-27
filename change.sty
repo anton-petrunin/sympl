@@ -1,0 +1,13 @@
+% \marginparwidth20em
+\RequirePackage{color}
+\DeclareRobustCommand{\change}[2]{\@ifempty{#2}
+  {\protect\leavevmode\@tempdima\lastskip\smash{\protect\makebox[0pt][l]{\hskip-.5\@tempdima
+   \color{red}\strut\vrule depth\dp\strutbox\hskip-.1em
+   \protect\raisebox{-1.2ex}{\normalfont\textasciitilde\hskip-.26em\textasciitilde}}}%
+   \gdef\t@mp{\marginpar{\vskip-6pt\color{red}\footnotesize\raggedright убрано `#1'}}%
+   \ifdim\@tempdima>0pt\hskip0pt\ignorespaces\fi}
+  {\gdef\t@mp{\marginpar{\vskip-6pt\color{black}\footnotesize\raggedright \@ifempty{#1}{вставлено `#2'}{было `#1'}}}\textcolor{red}{\relax #2}}\ifmmode\aftergroup\t@mp\else\t@mp\fi}
+
+\long\def\?#1#2{%
+\message{^^JPage \thepage^^J}\marginpar{\vskip-6pt\footnotesize\raggedright #2}%
+{\underline{#1}}}
