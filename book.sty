@@ -54,7 +54,7 @@ isbn=false]{biblatex}
 \csname @openrightfalse\endcsname
 
 %THEOREM
-\newcounter{thm}[chapter]
+\newcounter{thm}[section]
 \renewcommand{\thethm}{\thesection.\Alph{thm}}
 \newcommand\claim[2][{}]{\par\medskip\noindent\refstepcounter{thm}\hbox{{\bf #2\ \thesection.\Alph{thm}.}{\ {\it #1}}}
 \it\ %\ignorespaces
@@ -69,6 +69,9 @@ isbn=false]{biblatex}
 \def\endclaim{
 \par\medskip}
 \newenvironment{thm*}{\claimnn}{\endclaim}
+
+%equation
+\renewcommand{\theequation}{\thesection.\Alph{equation}}
 
 \renewcommand{\ge}{\geqslant}
 \renewcommand{\le}{\leqslant}
