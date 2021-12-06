@@ -1,25 +1,73 @@
 \usepackage{dsfont}
 
+% Правильнее использовать операторы. ТеХ тогда ставит пробелы
+% правильнее. 
+\let\dmo=\DeclareMathOperator
 \def\1{\mathds{1}}
 \def\A{\mathcal{A}}
-\def\Ad{\mathrm{Ad}}
-\def\Area{\mathrm{Area}}
-\def\Closure{\mathrm{Closure}}
-\def\const{\mathrm{const}}
-\def\Diff{\mathrm{Diff}}
-\def\e{\mathit{e}}
-\def\Ham{\mathrm{Ham}}
-\def\length{\mathrm{length}}
-\def\norm{\mathrm{norm}}
+\dmo\Ad{\mathrm{Ad}}
+\dmo\Area{\mathrm{Area}}
+\dmo\const{\mathrm{const}}
+\dmo\Closure{\mathrm{Closure}}
+\dmo\Diff{\mathrm{Diff}}
+\dmo\e{\mathrm{e}}
+\dmo\Ham{\mathrm{Ham}}
+\dmo\length{\mathrm{length}}
+\dmo\norm{\mathrm{norm}}
 \def\RR{\mathbb{R}}
-\def\sgrad{\mathrm{sgrad\,}}
-\def\SO{\mathit{SO}}
-\def\so{\mathit{so}}
-\def\supp{\mathrm{supp}}
-\def\Symp{\mathrm{Symp}}
-\def\Vol{\mathrm{Vol}}
+\dmo\sgrad{\mathrm{sgrad}}
+\dmo\SO{\mathit{SO}}
+\dmo\so{\mathit{so}}
+\dmo\supp{\mathrm{supp}}
+\dmo\Symp{\mathrm{Symp}}
+\dmo\Vol{\mathrm{Vol}}
+\def\d{\drm\mkern1mu}
 \def\ZZ{\mathbb{Z}}
 
 \def\:{\colon}
-\def\emptyset{\varnothing}
-\newcommand*{\set}[2]{\left\{\,\left.{#1}\vphantom{#2}\,\right|\,{#2}\,\right\}}
+%\newcommand*{\set}[2]{\left\{\,\left.{#1}\vphantom{#2}\,\right|\,{#2}\,\right\}}
+% Более научно сделать так
+\newcommand*{\set}[2]{\left\{ \,{#1}\, \middle| \,{#2}\, \right\}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Math letters
+% Тоша, я очень привык к этому. Определяю для всех букв
+% \<буква><шрифт> заранее. Пусть останется.
+\makeatletter
+\def\mathun#1{\underline{#1}}
+\def\mathov#1{\overline{#1}}
+\def\mathbar#1{\bar{#1}}
+\def\mathhat#1{\hat{#1}}
+\def\mathwh#1{\widehat{#1}}
+\def\mathtilde#1{\tilde{#1}}
+
+
+\def\mkmathletter#1#2{%
+    \expandafter\gdef\csname#1#2\endcsname%
+           {\ensuremath{\csname math#2\endcsname{#1}}}%
+}
+
+\edef\letters{a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z}
+\edef\Letters{A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z}
+\edef\Lletters{\letters,\Letters}
+
+\def\mkmathletters#1#2{%
+        \@for\ltr:={#2}\do{\expandafter\mkmathletter\ltr{#1}}%
+}
+
+\mkmathletters{frak}{\Lletters} %\Afrak, \bfrak
+\mkmathletters{bb}{\Letters}    %\Rbb,\Nbb   blackboard bold
+\mkmathletters{cal}{\Lletters}   %\Acal,\bcal caligraphic
+\mkmathletters{bf}{\Lletters}   %\Abf,\bbf   bold
+\mkmathletters{rm}{\Lletters}   %\Arm, \brm
+\mkmathletters{sf}{\Lletters}   %\Asf, \bsf  san serif
+\mkmathletters{un}{\Lletters}   % underlined
+\mkmathletters{ov}{\Lletters}   % overlined
+\mkmathletters{wh}{\Lletters}   % with hat
+\mkmathletters{tilde}{\Lletters}% with tilde
+\mkmathletters{bar}{\Lletters}  % with bar, smaller then overlined
+%% Math letters
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
