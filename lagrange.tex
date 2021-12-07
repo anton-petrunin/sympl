@@ -285,17 +285,23 @@ H(x,t)&\text{при}\ t\in [0,1]
 Покажите, что $\int_0^2G (g_t (x), t) dt = 0$ для всех $x$.
 \end{thm*}
 
+\begin{figure}[ht!]
+\vskip-3mm
+\centering
+\includegraphics{mppics/pic-2}
+\caption{}\label{pic-2}
+\vskip0mm
+\end{figure}
 
 Применим теперь конструкцию лагранжевой надстройки (см. \ref{3.1.E} выше).
 Мы получаем новое лагранжево подмногообразие $L' \subset \RR^{2n} \z\times T^{\ast} S^1$ как образ $L \times S^1$ при отображении 
 \[(x, t) \mapsto (g_t (x), -G (g_t (x), t), t).\]
 Отметим, что здесь $S^1 = \RR / 2\ZZ$.
-Определим две \?{функции}{тут всё правилно?} 
-\[a_+ (t) = - \min_x G (x, t) + \epsilon
-\]
-и 
-\[a_- (t) = - \max_x G (x, t) - \epsilon.
-\]
+Определим две функции 
+\begin{align*}a_+ (t) &= - \min_x G (x, t) + \epsilon
+&&\text{и}&
+a_- (t) &= - \max_x G (x, t) - \epsilon.
+\end{align*}
 Ясно, что $L \subset \RR \times C \subset \RR \times T^\ast S^1$, где $C$ обозначает кольцо 
 $\{a_- (t) <r <a_+ (t)\}$
 (см. рисунок 2).
@@ -316,7 +322,6 @@ $\{a_- (t) <r <a_+ (t)\}$
 \end{itemize}
 \end{thm*}
 
-РИСУНОК 2
 
 РИСУНОК 3
 
