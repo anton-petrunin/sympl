@@ -43,7 +43,7 @@ z0=-z2;
 z.r=(0,1.7)*u;
 z.max=(-1.2,.5)*u+(0,eps);
 z.min=(1,1.1)*u+(0,eps);
-z.neck=.25*z0-1.1*z.r;
+
 
 
 p0=z0+(0,eps)--z0+(eps,eps){right}..z.max{right}..{right}z1+(-eps,eps)--z1+(eps,eps){right}..(z.min){right}..{right}z2+(-eps,eps)--z2+(0,eps);
@@ -54,9 +54,6 @@ hatchfill ((-eps,eps)--(-eps,-eps)--(0,-eps)--(0,eps)--cycle) shifted z2   withc
 
 drawarrow ddline(z0,z2)(0,.2);
 drawarrow ddline(z0-z.r,z0+z.r)(0,0);
-drawarrow z.neck+(-40,eps/2)--z.0+(eps/2,-3*eps/2);
-drawarrow z.neck+(0,eps/2)--z1+(0,-3*eps/2);
-drawarrow z.neck+(40,eps/2)--z2+(-eps/2,-3*eps/2);
 
 draw p0;
 draw p0 rotated 180;
@@ -66,6 +63,11 @@ draw ((eps,eps)--(eps,-eps))  dashed evenly;
 draw ((-eps,eps)--(-eps,-eps))  dashed evenly;
 draw ((-eps,eps)--(-eps,-eps)) shifted z2 dashed evenly;
 draw ((0,eps)--(0,-eps)) shifted z2 dashed evenly;
+
+z.neck=.22*z0-1.1*z.r;
+drawarrow z.neck+(-40,eps/2)--z.0+(eps/2,-3*eps/2);
+drawarrow z.neck+(0,eps/2)--z1+(0,-3*eps/2);
+drawarrow z.neck+(40,eps/2)--z2+(-eps/2,-3*eps/2);
 
 label.lft(btex $r$ etex, z0+z.r);
 label.bot(btex $t$ etex, 1.4*z2);
@@ -138,7 +140,7 @@ label.bot(btex восьмёрка etex, z.8);
 
 z.disc=(2.2,-.9)*u;
 drawarrow ddline(z.disc,point 3 of p3)(-.1,-.1);
-label.bot(btex объемлющий диск $B$ etex, z.disc);
+label.bot(btex объемлющий диск$B$ etex, z.disc);
 
 z.ears=(0,1)*u;
 drawarrow ddline(z.ears+(20,0),.5[z.r,z.rr])(-.05,0);
