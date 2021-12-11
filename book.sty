@@ -2,11 +2,13 @@
 \usepackage[intlimits]{amsmath}
 \usepackage[utf8]{inputenc}
 \usepackage[T2A,T1]{fontenc}
-\usepackage[english,russian]{babel}
+\usepackage{enumerate}
 \usepackage{indentfirst}%+отступ в первой строке
 \usepackage{graphicx}
 \usepackage{wrapfig}
+\usepackage{subcaption}
 \usepackage{bm}
+\usepackage{framed}
 \usepackage[
 colorlinks=true,
 citecolor=black,
@@ -17,7 +19,6 @@ menucolor=black,
 urlcolor=black,
 unicode=true
 ]{hyperref}
-\usepackage{enumitem}
 \usepackage{geometry}
 
 \usepackage[xindy]{imakeidx}
@@ -51,7 +52,12 @@ isbn=false]{biblatex}
 
 %\DeclareUnicodeCharacter{FEFF}{*******************************}
 
+\usepackage[english,russian]{babel}
+
 \csname @openrightfalse\endcsname
+
+\usepackage{chngcntr}
+\counterwithout{figure}{chapter}
 
 %THEOREM
 \newcounter{thm}[section]
@@ -73,14 +79,11 @@ isbn=false]{biblatex}
 %equation
 \numberwithin{equation}{section}
 \renewcommand{\theequation}{\thesection.\Alph{equation}}
+\renewcommand{\thefigure}{\arabic{figure}}
 
 \def\parit{\medskip\par\noindent\textit}
 \def\parbf{\medskip\par\noindent\textbf}
 \def\qeds{\qed\par\medskip}
-
-\renewcommand{\ge}{\geqslant}
-\renewcommand{\le}{\leqslant}
-\def\phi{\varphi}
 
 \newcommand*{\z}[1]{#1\nobreak\discretionary{}%
             {\hbox{$\mathsurround=0pt #1$}}{}}
