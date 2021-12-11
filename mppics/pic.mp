@@ -157,4 +157,68 @@ label.top(btex график $a_+$ etex, z.aa);
 
 endfig;
 
+beginfig(4) 
+save u, N, k;
+u:=2cm;
+save p; path p[];
+N=8;
+k=.4;
+l=1.2;
+m=2.4;
+n=4;
+
+transform T;
+(-1,1)*u=(-1,1)*u transformed T;
+(1,1)*u=(1,1)*u transformed T;
+(-1,-1)*u=(0,0)*u transformed T;
+
+p1=(-1,1)*u
+for i=-N+1 step 1 until N :
+..(i/N,sqrt(1/k**2+(i/N)**2)-sqrt(1/k**2+1)+1)*u transformed T
+endfor
+;
+
+p2=(-1,1)*u
+for i=-N+1 step 1 until N :
+..(i/N,sqrt(1/l**2+(i/N)**2)-sqrt(1/l**2+1)+1)*u transformed T
+endfor
+;
+
+p3=(-1,1)*u
+for i=-N+1 step 1 until N :
+..(i/N,sqrt(1/m**2+(i/N)**2)-sqrt(1/m**2+1)+1)*u transformed T
+endfor
+;
+
+p4=(-1,1)*u
+for i=-N+1 step 1 until N :
+..(i/N,sqrt(1/n**2+(i/N)**2)-sqrt(1/n**2+1)+1)*u transformed T
+endfor
+;
+
+draw p1;
+draw p2;
+draw p3;
+draw p4;
+
+draw (-1,1)*u--(-1,-1)*u--(1,1)*u;
+
+drawarrow (-1.2,0)*u--(1.3,0)*u;
+drawarrow (0,-1.2)*u--(0,1.3)*u;
+drawarrow ddline((.5,1)*u, point N*1.4 of p1)(0,-.1);
+drawarrow ddline((.7,.3)*u,(.5,.5)*u)(0,-.1);
+drawarrow ddline((-1.3,.3)*u,(-1,.2)*u)(0,-.1);
+
+label.lrt(btex $x$ etex, (1.3,0)*u);
+label.ulft(btex $w$ etex, (0,1.3)*u);
+label.ulft(btex $1$ etex, (0,1)*u);
+label.llft(btex $-1$ etex, (-1,0)*u);
+label.llft(btex $-1$ etex, (0,-1)*u);
+label.lrt(btex $1$ etex, (1,0)*u);
+label.top(btex график$(f_s)$ etex, (.6,1)*u);
+label.rt(btex график$(f_\infty)$ etex, (.7,.3)*u);
+label.lft(btex образ$(h)$ etex, (-1.3,.3)*u);
+
+endfig;
+
 end
