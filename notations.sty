@@ -8,10 +8,13 @@
 \dmo\Ad{\mathrm{Ad}}
 \dmo\Area{\mathrm{Area}}
 \dmo\area{\mathrm{area}}
+\def\C{\mathcal{C}}
 \dmo\const{\mathrm{const}}
 \dmo\Closure{\mathrm{Closure}}
 \dmo\Diff{\mathrm{Diff}}
 \dmo\e{\mathit{e}}
+\def\F{\mathcal{F}}
+\def\H{\mathcal{H}}
 \dmo\Ham{\mathrm{Ham}}
 \dmo\id{\mathrm{id}}
 \dmo\length{\mathrm{length}}
@@ -38,6 +41,15 @@
 \def\emptyset{\varnothing}
 \def\epsilon{\varepsilon}
 \def\phi{\varphi}
+
+\DeclareFontEncoding{FMS}{}{}
+\DeclareFontSubstitution{FMS}{futm}{m}{n}
+\DeclareFontEncoding{FMX}{}{}
+\DeclareFontSubstitution{FMX}{futm}{m}{n}
+\DeclareSymbolFont{fouriersymbols}{FMS}{futm}{m}{n}
+\DeclareSymbolFont{fourierlargesymbols}{FMX}{futm}{m}{n}
+\DeclareMathDelimiter{\VERT}{\mathord}{fouriersymbols}{152}{fourierlargesymbols}{147}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Math letters
