@@ -162,50 +162,26 @@ save u, N, k;
 u:=2cm;
 save p; path p[];
 N=8;
-k=.4;
-l=1.2;
-m=2.4;
-n=4;
+
 
 transform T;
 (-1,1)*u=(-1,1)*u transformed T;
 (1,1)*u=(1,1)*u transformed T;
 (-1,-1)*u=(0,0)*u transformed T;
 
-p1=(-1,1)*u
+for k=.4, 1.2, 2.4, 4:
+draw (-1,1)*u
 for i=-N+1 step 1 until N :
-..(i/N,sqrt(1/k**2+(i/N)**2)-sqrt(1/k**2+1)+1)*u transformed T
+...(i/N,sqrt(1/k**2+(i/N)**2)-sqrt(1/k**2+1)+1)*u transformed T
 endfor
 ;
-
-p2=(-1,1)*u
-for i=-N+1 step 1 until N :
-..(i/N,sqrt(1/l**2+(i/N)**2)-sqrt(1/l**2+1)+1)*u transformed T
 endfor
-;
-
-p3=(-1,1)*u
-for i=-N+1 step 1 until N :
-..(i/N,sqrt(1/m**2+(i/N)**2)-sqrt(1/m**2+1)+1)*u transformed T
-endfor
-;
-
-p4=(-1,1)*u
-for i=-N+1 step 1 until N :
-..(i/N,sqrt(1/n**2+(i/N)**2)-sqrt(1/n**2+1)+1)*u transformed T
-endfor
-;
-
-draw p1;
-draw p2;
-draw p3;
-draw p4;
 
 draw (-1,1)*u--(-1,-1)*u--(1,1)*u;
 
 drawarrow (-1.2,0)*u--(1.3,0)*u;
 drawarrow (0,-1.2)*u--(0,1.3)*u;
-drawarrow ddline((.5,1)*u, point N*1.4 of p1)(0,-.1);
+drawarrow ddline((.5,1)*u, (.5,sqrt(1/.4**2+(.5)**2)-sqrt(1/.4**2+1)+1)*u transformed T)(0,-.1);
 drawarrow ddline((.7,.3)*u,(.5,.5)*u)(0,-.1);
 drawarrow ddline((-1.3,.3)*u,(-1,.2)*u)(0,-.1);
 
@@ -220,5 +196,46 @@ label.rt(btex график$(f_\infty)$ etex, (.7,.3)*u);
 label.lft(btex образ$(h)$ etex, (-1.3,.3)*u);
 
 endfig;
+
+beginfig(5) 
+save u, k;
+u:=1.4cm;
+save p; path p[];
+
+z.F=(.1,0)*u;
+
+
+
+z.a0=(1.9,-1)*u;
+z.a1=(1.5,0)*u;
+z.a2=(2,1)*u;
+
+draw z.a0..z.a1{z.F-z.a1 zscaled (0,-1)}..z.a2 penbold;
+
+z.b0=(-2.7,-.4)*u;
+z.b1=(-2,-.9)*u;
+z.b2=(-1.5,-1.4)*u;
+
+draw z.b0..z.b1{.7, -1}..z.b2 penbold;
+
+z.c0=(-2.7,1)*u;
+z.c1=(-2,.8)*u;
+z.c2=(-1.5,1.3)*u;
+
+draw z.c0..z.c1{.7, 1}..z.c2 penbold;
+
+draw z.F--z.a1;
+
+draw (-3,2)*u--(2.5,2)*u--(2.5,-2)*u--(-3,-2)*u--cycle;
+
+dOt z.F, z.b1;
+
+label.rt(btex {\Large $\H$} etex, z.a1);
+label.rt(btex {\Large $\F$} etex, (2.5,0)*u);
+label.lft(btex $F$ etex, z.F);
+label.llft(btex $0$ etex, z.b1);
+label.top(btex $\rho(\1,\phi_F)$ etex, .5[z.F,z.a1]);
+endfig;
+
 
 end
