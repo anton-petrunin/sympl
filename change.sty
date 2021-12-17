@@ -12,4 +12,5 @@
 \message{^^JPage \thepage^^J}\marginpar{\vskip-6pt\footnotesize\raggedright #2}%
 {\underline{#1}}}
 
-\def\red#1{\textcolor{red}{#1}}
+\long\def\red#1{\begingroup\color{red}{#1}\endgroup}
+\long\def\blue#1{\begingroup\color{blue}{#1}\endgroup}
