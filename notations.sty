@@ -29,7 +29,7 @@
 \dmo\supp{\mathrm{supp}}
 \dmo\Symp{\mathrm{Symp}}
 \dmo\Vol{\mathrm{Vol}}
-\def\d{\drm\mkern1mu}
+\def\d{\drm\mkern0mu}
 \def\ZZ{\mathbb{Z}}
 
 \def\:{\colon}
@@ -40,9 +40,9 @@
 \renewcommand{\ge}{\geqslant}
 \renewcommand{\le}{\leqslant}
 
-\def\emptyset{\varnothing}
-\def\epsilon{\varepsilon}
-\def\phi{\varphi}
+\let\emptyset=\varnothing
+\let\epsilon=\varepsilon
+\let\phi=\varphi
 
 \DeclareFontEncoding{FMS}{}{}
 \DeclareFontSubstitution{FMS}{futm}{m}{n}
@@ -90,6 +90,10 @@
 \mkmathletters{wh}{\Lletters}   % with hat
 \mkmathletters{tilde}{\Lletters}% with tilde
 \mkmathletters{bar}{\Lletters}  % with bar, smaller then overlined
+
+%Интересно, как это у Тоши ТеХ ест π без декларации.
+\DeclareUnicodeCharacter{03C0}{\pi}
+
 %% Math letters
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
