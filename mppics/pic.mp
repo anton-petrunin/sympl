@@ -198,7 +198,7 @@ label.lft(btex образ$(h)$ etex, (-1.3,.3)*u);
 endfig;
 
 beginfig(5) 
-save u, k;
+save u;
 u:=1.4cm;
 save p; path p[];
 
@@ -237,5 +237,31 @@ label.llft(btex $0$ etex, z.b1);
 label.top(btex $\rho(\1,\phi_F)$ etex, .5[z.F,z.a1]);
 endfig;
 
+beginfig(6) 
+save u;
+u:=1cm;
+save p; path p[];
 
+z.shift=(3,0)*u;
+
+p0=circle(origin, u);
+p1= (u,0) rotated -10..(u/2,0) rotated -100..(u,0) rotated -190;
+p2= (u,0) rotated -50..(u/3,0) rotated -140..(u,0) rotated -230;
+
+draw p0;
+draw  p1 rotated 180 dashed evenly;
+draw  p1;
+draw  p2 rotated 180 dashed evenly;
+draw  p2;
+
+draw p0 shifted z.shift;
+draw  p1 rotated 180 shifted z.shift dashed evenly;
+draw  p1 shifted z.shift;
+draw ellipse_canonical(.7*u, .5*u) rotated -5 shifted ((-.1,.3)*u) shifted z.shift;
+draw ellipse_canonical(.35*u, .2*u) rotated -5 shifted ((-.2,.3)*u) shifted z.shift;
+
+label.bot(btex точная etex, (0,-u)+(0,-1));
+label.bot(btex не точная etex, (0,-u) + z.shift+(0,-1));
+
+endfig;
 end
