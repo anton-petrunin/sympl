@@ -242,7 +242,7 @@ save u;
 u:=1cm;
 save p; path p[];
 
-z.shift=(3,0)*u;
+z.shift=(2.6,0)*u;
 
 p0=circle(origin, u);
 p1= (u,0) rotated -10..(u/2,0) rotated -100..(u,0) rotated -190;
@@ -262,6 +262,49 @@ draw ellipse_canonical(.35*u, .2*u) rotated -5 shifted ((-.2,.3)*u) shifted z.sh
 
 label.bot(btex точная etex, (0,-u)+(0,-1));
 label.bot(btex не точная etex, (0,-u) + z.shift+(0,-1));
+
+endfig;
+
+beginfig(7) 
+save u;
+u:=1cm;
+save p; path p[];
+
+z.ur=(1,1)*u;
+z.shift=(2.6,0)*u;
+
+draw z.ur yscaled -1--z.ur;
+draw -z.ur--z.ur xscaled -1;
+draw -z.ur yscaled 0-- z.ur yscaled 0;
+draw -z.ur yscaled 0{1,2}..tension .8..{1,2}z.ur yscaled 0;
+
+draw (z.ur yscaled -1--z.ur) shifted z.shift;
+draw (-z.ur--z.ur xscaled -1) shifted z.shift;
+draw (-z.ur yscaled 0-- z.ur yscaled 0) shifted z.shift;
+draw (-z.ur yscaled 0-- z.ur yscaled 0) shifted z.shift shifted ((0,.5)*u);
+drawarrow ((-.333,.1)*u--(-.333,.4)*u) shifted z.shift;
+drawarrow ((.333,.1)*u--(.333,.4)*u) shifted z.shift;
+
+label.bot(btex точная etex, (0,-u)+(0,-1));
+label.bot(btex не точная etex, (0,-u) + z.shift+(0,-1));
+endfig;
+
+beginfig(8) 
+save u;
+u:=1cm;
+save p; path p[];
+
+p0=circle(origin, u);
+p1= (u,0) rotated -10..(u/4,0) rotated -100..(u,0) rotated -190;
+p2=circle(origin, u/5);
+
+
+draw p0;
+draw  p1 rotated 180 dashed evenly;
+draw  p1;
+draw p2 shifted ((-.5,.4)*u);
+draw p2 shifted ((.2,.4)*u);
+drawarrow (-.25,.4)*u--(-.05,.4)*u;
 
 endfig;
 end
