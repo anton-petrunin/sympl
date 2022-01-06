@@ -60,10 +60,16 @@ isbn=false]{biblatex}
 \usepackage{chngcntr}
 \counterwithout{figure}{chapter}
 
+
+%equation
+\numberwithin{equation}{section}
+\renewcommand{\theequation}{\thesection.\Alph{equation}}
+
+\renewcommand{\thefigure}{\arabic{figure}}
+
 %THEOREM
-\newcounter{thm}[section]
-\renewcommand{\thethm}{\thesection.\Alph{thm}}
-\newcommand\claim[2][{}]{\par\medskip\noindent\refstepcounter{thm}\hbox{{\bf #2\ \thesection.\Alph{thm}.}{\ {\it #1}}}
+\newcommand{\thethm}{\thesection.\Alph{equation}}
+\newcommand\claim[2][{}]{\par\medskip\noindent\refstepcounter{equation}\hbox{{\bf #2\ \thesection.\Alph{equation}.}{\ {\it #1}}}
 \it\ %\ignorespaces
 }
 \def\endclaim{
@@ -76,11 +82,6 @@ isbn=false]{biblatex}
 \def\endclaim{
 \par\medskip}
 \newenvironment{thm*}{\claimnn}{\endclaim}
-
-%equation
-\numberwithin{equation}{section}
-\renewcommand{\theequation}{\thesection.\Alph{equation}}
-\renewcommand{\thefigure}{\arabic{figure}}
 
 \def\parit{\medskip\par\noindent\textit}
 \def\parbf{\medskip\par\noindent\textbf}
