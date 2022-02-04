@@ -307,4 +307,32 @@ draw p2 shifted ((.2,.4)*u);
 drawarrow (-.25,.4)*u--(-.05,.4)*u;
 
 endfig;
+
+beginfig(9) 
+save u,n,m;
+u:=.5cm;
+n:=5;
+m:=5;
+save p; path p[];
+
+
+draw (0,0)--((n+1)*u,0);
+
+for i=1 step 1 until n:
+draw (i*u,1*u)--(i*u,6.5*u);
+endfor
+
+drawarrow ((n+1)*u,5*u)--((n+1)*u,2.5*u);
+
+for i=1 step 1 until n:
+for j=2 step 1 until m:
+draw (-.3*(1,-j/20+i/10)*u--.3*(1,-j/20+i/10)*u) shifted ((i,j+i*i/20-i*j/20)*u);
+endfor
+endfor
+
+label.rt(btex $S^2$ etex, ((n+1)*u,0));
+label.lft(btex $p$ etex, ((n+1)*u,3.75*u));
+label.lft(btex $P$ etex, (1*u,6*u));
+
+endfig;
 end
