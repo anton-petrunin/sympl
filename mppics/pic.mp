@@ -335,4 +335,23 @@ label.lft(btex $p$ etex, ((n+1)*u,3.75*u));
 label.lft(btex $P$ etex, (1*u,6*u));
 
 endfig;
+
+beginfig(10) 
+save u;
+u:=1.4cm;
+save p; path p[];
+
+z.omega=(-.5,-.5)*u;
+z.l=(.2,.2)*u;
+
+
+draw ddline(z.omega,z.l)(0,0.3);
+dOt z.omega;
+
+draw (-1,1)*u--(1,1)*u--(1,-1)*u--(-1,-1)*u--cycle;
+
+label.bot(btex $[\omega]$ etex, z.omega);
+label.lrt(btex $l$ etex, z.l);
+endfig;
+
 end
