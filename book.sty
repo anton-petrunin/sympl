@@ -69,19 +69,35 @@ isbn=false]{biblatex}
 
 %THEOREM
 \newcommand{\thethm}{\thesection.\Alph{equation}}
+
 \newcommand\claim[2][{}]{\par\medskip\noindent\refstepcounter{equation}\hbox{{\bf #2\ \thesection.\Alph{equation}.}{\ {\it #1}}}
 \it\ %\ignorespaces
 }
 \def\endclaim{
 \par\medskip}
+
 \newenvironment{thm}{\claim}{\endclaim}
 
 \newcommand\claimnn[2][{}]{\par\medskip\noindent\hbox{{\bf #2.}\ {\it #1}}
 \it\ %\ignorespaces
 }
+\newenvironment{thm*}{\claimnn}{\endclaim}
+
+\newcommand\claimex[2][{}]{\par\medskip\noindent\refstepcounter{equation}\hbox{{\bf #2\ \thesection.\Alph{equation}.}{\ {\it #1}}}
+\ %\ignorespaces
+}
+
+\newenvironment{ex}{\claimex}{\endclaim}
+
+\newcommand\claimexnn[2][{}]{\par\medskip\noindent\hbox{{\bf #2.}\ {\it #1}}
+\ %\ignorespaces
+}
 \def\endclaim{
 \par\medskip}
-\newenvironment{thm*}{\claimnn}{\endclaim}
+
+\newenvironment{ex*}{\claimexnn}{\endclaim}
+
+
 
 \def\parit{\medskip\par\noindent\textit}
 \def\parbf{\medskip\par\noindent\textbf}
