@@ -355,4 +355,51 @@ label.lrt(btex $l$ etex, z.l);
 label.lrt(btex $H^2(P,\RR)$ etex, (-1,1)*u);
 endfig;
 
+beginfig(11) 
+save u;
+u:=1cm;
+save p; path p[];
+
+z.b=(-1.5,0)*u;
+z.sb0=(-1,.3);
+z.sb1=(-1,-.5);
+z.t=(-1.5,1)*u;
+z.st0=(1,.3);
+z.st1=(1,-.4);
+z.shift=(3,.3)*u;
+z.vshift=(0,-4.7)*u;
+z.a0=(-.8,.5)*u;
+z.a1=(.8,.6)*u;
+z.d0=(0,-1)*u;
+z.d1=(0,-2)*u;
+
+p0=z.b{z.sb0}..tension 4..z.t{z.st0}..tension 4..cycle;
+p1=z.b{z.sb1}..tension 4..z.t{z.st1}..tension 4..cycle;
+p3=z.b*2+(0,.5)*u{up}..tension 2..(z.b+z.shift)*2+(0,.5)*u{down}..tension 2..cycle;
+p4=(z.b{1,.8}..{1,.7}z.b+z.shift) shifted z.vshift shifted ((0,.6)*u);
+p10=z.b{-z.sb0}..z.b+z.shift{-z.sb1};
+p11=z.t{z.st0}..z.t+z.shift{z.st1};
+p20=z.a0{(1,-.7)}..{(1,.5)}z.a1;
+p21=point .2 of p20 {(1,.5)}..{(1,-.3)} point .8 of p20;
+
+draw p0;
+draw p1 shifted z.shift;
+draw p3;
+draw p3 shifted z.vshift;
+draw p4;
+draw p10;
+draw p11;
+draw p20;
+draw p21;
+drawarrow z.d0--z.d1;
+
+dOt point 0 of p4, point 1 of p4;
+
+label.rt(btex {\large $\mathcal{X}$} etex, (z.b+z.shift)*2+(0,.5)*u);
+label.rt(btex {\large $\mathcal{J}$} etex, (z.b+z.shift)*2+(0,.5)*u + z.vshift);
+label.rt(btex $\pi$ etex, .5[z.d0,z.d1]);
+label.lft(btex $j_0$ etex, point 0 of p4);
+label.rt(btex $j_1$ etex, point 1 of p4);
+label.top(btex $\gamma$ etex, point .5 of p4);
+endfig;
 end
