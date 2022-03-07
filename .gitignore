@@ -23,3 +23,5 @@ lib/*
 *.mps
 *.mpx
 *.eps
+*tmp*
+mppics/mpxerr.tex
