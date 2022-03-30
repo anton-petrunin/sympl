@@ -69,7 +69,7 @@ drawarrow z.neck+(-40,eps/2)--z.0+(eps/2,-3*eps/2);
 drawarrow z.neck+(0,eps/2)--z1+(0,-3*eps/2);
 drawarrow z.neck+(40,eps/2)--z2+(-eps/2,-3*eps/2);
 
-label.lft(btex $r$ etex, z0+z.r);
+label.lft(btex $r$ etex, (z0+z.r));
 label.bot(btex $t$ etex, 1.4*z2);
 label.lft(btex $\epsilon$ etex, z0+(-1,eps));
 label.lft(btex $-\epsilon$ etex, z0+(-1,-eps));
@@ -453,5 +453,54 @@ label.rt(btex $\pi$ etex, .5[z.d0,z.d1]);
 label.lft(btex $j_0$ etex, point 0 of p4);
 label.rt(btex $j_1$ etex, point 1 of p4);
 label(btex {\large $\emptyset$} etex, .5[z.b,z.t]+ z.shift);
+endfig;
+
+beginfig(13) 
+save u;
+u:=2cm;
+save p;
+path p[];
+
+z.1=origin;
+z.phi=(1,1)*u;
+z.phik=(.7,1)*u;
+z.eps=(.7,1.4)*u;
+
+p0=z.1{right}..{-.3,1}z.phi;
+p1=z.1{up}..{right}z.phik;
+
+draw p0;
+draw p1;
+draw z.phik--z.phi dashed evenly;
+draw ddline(z.eps,.5[z.phi,z.phik])(.1,-.1);
+
+dOt z.1,z.phi,z.phik;
+
+label.llft(btex $\1$ etex, z.1);
+label.urt(btex $\phi$ etex, z.phi);
+label.ulft(btex $\phi_k$ etex, z.phik);
+label.rt(btex $\flux=\lambda$ etex, point .5 of p0);
+label.llft(btex гамильтонов путь etex, point .5 of p1+(-3,0));
+label.llft(btex $\flux=0$ etex, point .5 of p1 +(-18,-10));
+label.top(btex путь с малым потоком $\epsilon_k$ etex, z.eps);
+endfig;
+
+beginfig(14) 
+save u,a;
+u:=3cm;
+a:=.3;
+save p;
+path p[];
+
+draw (0,1)*u--(0,0)*u--(1,0)*u;
+draw (0,0)*u--(1,1)*u;
+draw (a,0)*u--(1,1-a)*u dashed evenly;
+draw (0,a)*u--(1-a,1)*u dashed evenly;
+draw (0,0)*u{1,2}..{1,0}(.2,.2+a/2)*u{1,0}..(.4,.4+a/2)*u{0,1}..(.6,.6+a/2)*u{1,0}..{0,1}(.8,.8+a/2)*u..(1-a/2,1)*u;
+
+label.llft(btex $(M,\Omega)$ etex, (1,0)*u);
+label.llft(btex $(M,-\Omega)$ etex, (0,1)*u);
+label.bot(btex $\Delta$ etex, (1,1)*u);
+label.top(btex график $\phi_k^{-1}\phi$ etex, (1,1)*u);
 endfig;
 end
