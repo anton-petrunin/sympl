@@ -24,6 +24,15 @@ unicode
 
 \usepackage[xindy]{imakeidx}
 
+\makeindex[intoc]
+%\makeindex[intoc,name=symb,title={Список обозначений}]
+
+\makeatletter
+\newcommand{\rindex}[2][\imki@jobname]{%
+  \index[#1]{\detokenize{#2}}%
+}
+\makeatother
+
 \usepackage[
 sorting=debug,
 bibencoding=auto,
