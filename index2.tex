@@ -1,0 +1,30 @@
+\documentclass[twoside]{book}
+\usepackage{book}
+\usepackage{imakeidx}
+    \makeindex[title=Обозначения]
+    \makeindex[name=extra,title=Другое]
+    
+\begin{document}
+У меня нужно вручную компилировать индексы, т.е.
+\begin{verbatim}
+  > pdflatex index2
+  ...
+  > makeindex extra
+  ...
+  > makeindex index2
+  ...
+  > pdflatex index2
+\end{verbatim}
+Я вспоминаю, что когда-то из паранойных соображений запретил \TeXу
+запускать другие программы, но не помню, как и где мои инструкции.
+    
+Обоз\index{обоз} значения это не то же самое, что обозначение\index{обозначение}.
+А значение обоза это уже совсем что-то другое%
+\index[extra]{совсем другое}.
+
+\newpage
+\printindex
+\newpage
+\printindex[extra]
+
+\end{document}
