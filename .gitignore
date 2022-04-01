@@ -27,3 +27,6 @@ lib/*
 mppics/mpxerr.tex
 *13.txt*
 \#*\#
+*.errorlist
+*.shortlog
+*.fls
