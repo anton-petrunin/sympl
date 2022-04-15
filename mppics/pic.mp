@@ -352,7 +352,7 @@ draw (-1,1)*u--(1,1)*u--(1,-1)*u--(-1,-1)*u--cycle;
 
 label.bot(btex $[\omega]$ etex, z.omega);
 label.lrt(btex $l$ etex, z.l);
-label.lrt(btex $H^2(P,\RR)$ etex, (-1,1)*u);
+label.lrt(btex $H^2(P;\RR)$ etex, (-1,1)*u);
 endfig;
 
 beginfig(11) 
