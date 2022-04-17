@@ -155,8 +155,6 @@ $\ell(\epsilon)$ \?{гладкая}{+ «в окрестносто нуля»?}.
 
 \?{}{Это странное упражнение. Достаточно чтобы максимум достигался
   хотя бы в двух точках.
-  %% Берём двугорбую функцию на $\Rbb^{2}$ с
-  %% $F_{max}=F(\pm1,0)$ и $H(\epsilon)=\epsilon\cdot x$. Тогда $l=|\epsilon|$
 }
 \begin{ex}{Упражнение}\label{12.1.G}
 Предположим, что множество максимума $F$ имеет непустую внутренность.
@@ -393,9 +391,9 @@ v)+\omega(\dot v, v)\right)\,dt=
 \parit{Доказательство \ref{12.4.A}.}
 Вычислим вторую производную $\ell_+(\epsilon)$.
 С $\ell_-(\epsilon)$ поступим аналогично.
-Мы будем работать в стандартных симплектических координатах $x = (p, q)$ вблизи $x_+$ и $\xi\cdot\eta$ обозначает Евклидово \?{скалярное}{в 1.4.H было $(\xi,\eta)$, а потом $\langle\xi,\eta\rangle$.} произведение.
+Мы будем работать в стандартных симплектических координатах $x = (p, q)$ вблизи $x_+$ и $\langle\xi,\eta\rangle$ обозначает евклидово скалярное произведение.
 Обозначим через $i$ комплексную структуру $(p, q) \mapsto (-q, p)$.
-В этих обозначениях $\Omega(\xi, i\eta) = \xi\cdot\eta$ и гамильтониан запишется как
+В этих обозначениях $\Omega(\xi, i\eta) = \langle\xi,\eta\rangle$ и гамильтониан запишется как
 \[\frac{\d}{\d t}f_tx=i\frac{\partial F}{\partial x}(f_tx,t).\]
 Значит
 \[C_+(t)=i\frac{\partial^2F}{\partial x^2}(x_+,t).\]
@@ -429,7 +427,7 @@ K&=\frac{\partial^2 F}{\partial x^2}(x_+,t)
 \]
 Снова дифференцируя по $\epsilon$ и полагая $\epsilon = 0$, мы получаем 
 \begin{equation}
-\frac{\d^2 \ell_+}{\d\epsilon^2}=\int_0^1 (a\cdot b +c)\,\d t.
+\frac{\d^2 \ell_+}{\d\epsilon^2}=\int_0^1 (\langle a, b\rangle +c)\,\d t.
 \label{eq:12.4.C}
 \end{equation}
 Дифференцируя уравнение 
@@ -449,7 +447,7 @@ b=-K^{-1}a.
 Дифференцируя это равенство по $\epsilon$ при $\epsilon = 0$ и $x =
 x_+$, получаем  
 \begin{equation}
-\int_0^1(a\cdot v_++c)\,\d t = 0.
+\int_0^1(\langle a, v_+\rangle+c)\,\d t = 0.
 \label{eq:12.4.E}
 \end{equation}
 
@@ -471,27 +469,36 @@ a=-i\dot v_+-Kv_+.
 \begin{align*}
 \frac{\d^2\ell_+}{\d\epsilon}(0)
 &=
-\int_0^1(a\cdot b+c)\,\d t=
+\int_0^1(\langle a, b\rangle+c)\,\d t=
 \\
-&=\int_0^1(a\cdot K^{-1}i\dot v_++a\cdot v_++c)\,\d t=
+&=\int_0^1(\langle a, K^{-1}i\dot v_+\rangle+\langle a, v_+\rangle+c)\,\d t=
 \\
-&\!\!\!\stackrel{\text{\tiny \ref{eq:12.4.E}}}{=}\int_0^1 a\cdot
-K^{-1}i\dot v_+\,\d t 
+&\!\!\!\stackrel{\text{\tiny \ref{eq:12.4.E}}}{=}
+\int_0^1 \langle a,
+K^{-1}i\dot v_+\rangle\,\d t 
 \\
-&\!\!\!\stackrel{\text{\tiny \ref{eq:12.4.F}}}{=}-\int_0^1(i\dot
-v_++Kv_+)\dot K^{-1}i\dot v_+\,\d t= 
+&\!\!\!\stackrel{\text{\tiny \ref{eq:12.4.F}}}{=}
+-\int_0^1\langle i\dot
+v_++Kv_+, K^{-1}i\dot v_+\rangle\,\d t= 
 \\
-&\stackrel{{*}}{=}-\int_0^1(K^{-1}i\dot v_+\cdot i\dot v_+ +v_+\cdot
-i\dot v_+)\,\d t= 
+&\stackrel{{*}}{=}
+-\int_0^1
+(\langle K^{-1}i\dot v_+, i\dot v_+\rangle +\langle v_+,
+i\dot v_+\rangle)\,\d t= 
 \\
-&=-\int_0^1(-C_+^{-1}\dot v_+\cdot i\dot v_++v_+\cdot i\dot v_+)\,\d t=
+&=
+-\int_0^1
+(-\langle C_+^{-1}\dot v_+, i\dot v_+\rangle
++\langle v_+, i\dot v_+\rangle)\,\d t=
 \\
-&=-\int_0^1(\Omega(C_+^{-1}\dot v_+,\dot v_+)+\Omega(\dot v_+,v_+))\,\d t.
+&=
+-\int_0^1
+(\Omega(C_+^{-1}\dot v_+,\dot v_+)+\Omega(\dot v_+,v_+))\,\d t.
 \end{align*}
 Равенство $({*})$ следует из симметрии $K$.
 Кроме того, мы воспользовались тем, что $C_+^{-1} = -К^{-1} i$ и
-$\Omega(\xi, i\eta) = \xi\cdot \eta$ 
-(или, эквивалентно, $-\Omega(\xi, \eta) = \xi\cdot i\eta$).
+$\Omega(\xi, i\eta) = \langle \xi, \eta\rangle$ 
+(или, эквивалентно, $-\Omega(\xi, \eta) = \langle \xi, i\eta\rangle$).
 \qeds
 
 \section{Анализ формулы второй вариации}\label{sec:12.5}
@@ -558,7 +565,7 @@ f_{t*} \left.\frac{\d}{\d \epsilon}\right|_{\epsilon=0} h_{1,\epsilon} x_+.
 то есть, $\tfrac{\partial^2\L}{\partial\dot v^2}$ положительно
 определена. 
 Действительно, 
-\[\L( \dot v, v) = -iC_+^{-1} \dot v\cdot\dot v - i\dot v\cdot v\]
+\[\L( \dot v, v) = -\langle iC_+^{-1} \dot v,\dot v\rangle - \langle i\dot v, v\rangle\]
 и, следовательно, $\tfrac{\partial^2\L}{\partial\dot v^2}= - 2i\cdot C_+^{-1}$.
 
 Так как 
