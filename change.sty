@@ -9,7 +9,8 @@
   {\gdef\t@mp{\marginpar{\vskip-6pt\color{black}\footnotesize\raggedright \@ifempty{#1}{вставлено `#2'}{было `#1'}}}\textcolor{red}{\relax #2}}\ifmmode\aftergroup\t@mp\else\t@mp\fi}
 
 \long\def\?#1#2{%
-\message{^^JPage \thepage^^J}\marginpar{\vskip-6pt\footnotesize\raggedright #2}%
+\message{^^JPage \thepage^^J}\marginpar{\vskip-6pt\footnotesize\raggedright
+  ьь: #2}%
 {\underline{#1}}}
 
 \long\def\red#1{\begingroup\color{red}{#1}\endgroup}
