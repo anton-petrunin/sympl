@@ -140,7 +140,7 @@ label.bot(btex восьмёрка etex, z.8);
 
 z.disc=(2.2,-.9)*u;
 drawarrow ddline(z.disc,point 3 of p3)(-.1,-.1);
-label.bot(btex объемлющий диск$B$ etex, z.disc);
+label.bot(btex объемлющий диск $B$ etex, z.disc);
 
 z.ears=(0,1)*u;
 drawarrow ddline(z.ears+(20,0),.5[z.r,z.rr])(-.05,0);
