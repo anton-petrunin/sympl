@@ -95,8 +95,9 @@ isbn=false]{biblatex}
 }
 \newenvironment{thm*}{\claimnn}{\endclaim}
 
-\newcommand\claimex[2][{}]{\par\medskip\noindent\refstepcounter{equation}\hbox{{\bf #2\ \thesection.\Alph{equation}.}{\ {\it #1}}}
-\ %\ignorespaces
+\newcommand\claimex[2][{}]{\ifstrempty{#2}{\par\medskip\noindent\refstepcounter{equation}\hbox{{\bf\thesection.\Alph{equation}.}{\ {\it #1}}}
+}{\par\medskip\noindent\refstepcounter{equation}\hbox{{\bf #2\ \thesection.\Alph{equation}.}{\ {\it #1}}}
+}\ 
 }
 
 \newenvironment{ex}{\claimex}{\endclaim}
@@ -115,6 +116,7 @@ isbn=false]{biblatex}
 \def\parbf{\medskip\par\noindent\textbf}
 \def\qeds{\qed\par\medskip}
 \def\qedsf{\vskip-6mm\qeds}%END OF PROOF BY FORMULA
+\def\qedsin{\eqno\square}%END OF PROOF in FORMULA
 
 \newcommand*{\z}[1]{#1\nobreak\discretionary{}%
             {\hbox{$\mathsurround=0pt #1$}}{}}
