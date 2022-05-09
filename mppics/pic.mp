@@ -331,7 +331,7 @@ endfor
 endfor
 
 label.rt(btex $S^2$ etex, ((n+1)*u,0));
-label.lft(btex $p$ etex, ((n+1)*u,3.75*u));
+label.rt(btex $p$ etex, ((n+1)*u,3.75*u));
 label.lft(btex $P$ etex, (1*u,6*u));
 
 endfig;
