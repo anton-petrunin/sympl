@@ -31,3 +31,4 @@ mppics/mpxerr.tex
 *.shortlog
 *.fls
 *~
+!/book-polterovich-translation-1-commented.pdf
