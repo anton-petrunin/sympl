@@ -500,7 +500,7 @@ draw (0,0)*u{1,2}..{1,0}(.2,.2+a/2)*u{1,0}..(.4,.4+a/2)*u{0,1}..(.6,.6+a/2)*u{1,
 
 label.llft(btex $(M,\Omega)$ etex, (1,0)*u);
 label.llft(btex $(M,-\Omega)$ etex, (0,1)*u);
-label.bot(btex $\Delta$ etex, (1,1)*u);
+label.bot(btex $L$ etex, (1,1)*u);
 label.top(btex график $\phi_k^{-1}\phi$ etex, (1,1)*u);
 endfig;
 
