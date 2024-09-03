@@ -13,18 +13,19 @@
 
 2. ок
 
-СТРАНИЦА 10:
+СТРАНИЦА 10: 
 
-3. Л: текст нужно поменять, например так: 
+3. по-моему ок, Лёня подверди?
+   С: поговорить с Т.
 
-"За последние пару десятилетий хоферовская геометрия группы гамильтоновых диффеоморфизмов обогатилась рядом новых интересных достижений. Для удобства читателя я добавил к переводу комментарии на несколько устаревших замечаний и
-решенных к настоящему моменту (январь, 2022)  проблем и гипотез. Кроме того, я включил ссылки на новые публикации по теме книги."
+Там же:
+   С: по-моему "вновь" в последнем предложении тоже нехорошо, как-будто
+   публикации были, пропали, и снова появились. Может
+   "вновь появившихся" --> "недавно появившихся"?
+   
+ ЛП: текст нужно поменять, например так:
 
-Для удобства привожу исходный английский текст:
-
-The past two decades had brought a number of interesting developments in Hofer's geometry on groups of Hamiltonian diffeomorphisms. For reader's convenience, I added a couple of comments, including up-to-date bibliographical
-references, on several obsolete remarks and resolved problems and/or  conjectures.
-
+"За последние пару десятилетий хоферовская геометрия группы гамильтоновых диффеоморфизмов обогатилась рядом новых интересных достижений. Для удобства читателя я добавил к переводу комментарии на несколько устаревших замечаний и решенных к настоящему моменту (январь, 2022) проблем и гипотез. Кроме того, я включил ссылки на новые публикации по теме книги."
 
 СТРАНИЦА 12:
 
@@ -94,7 +95,8 @@ references, on several obsolete remarks and resolved problems and/or  conjecture
 СТРАНИЦА 27:
 
 20. Вроде лучше оставить --- Лёня?
-    С: Это уже обсуждали с Лёней. Он согласен, что надо как у нас.
+    С: Это уже обсуждали с Лёней. Он согласен, что надо как у нас. 
+    ЛП: Подтверждаю
 
 СТРАНИЦА 27:
 
@@ -107,6 +109,10 @@ references, on several obsolete remarks and resolved problems and/or  conjecture
 23. лучше перепад --- у вариация это другое
     С: Слово "вариация" используется в предыдущем предложении.
     Лучше оба слова заменить на "амплитуда". 
+
+ЛП :Другой вариант- осцилляция. В литературе часто встречается
+Osc(f) = max f - min f. 
+
 
 СТРАНИЦА 31:
 
@@ -141,6 +147,7 @@ references, on several obsolete remarks and resolved problems and/or  conjecture
     В оригинале считается, что всё, от знака индеграла до d уже стоит в скобках,
     однако читать такое неудобно (мне).
     С: Со скобками лучше. $\big(...\big)$
+    ЛП: да, внешние скобки должны быть побольше
 
 СТРАНИЦА 34:
 
@@ -148,6 +155,9 @@ references, on several obsolete remarks and resolved problems and/or  conjecture
 
 37. ок
     С: Пробел!
+
+ЛП: более точно - спаривание пространств T_qN и T^*_qN 
+(добавлен нижний индекс q) 
 
 СТРАНИЦА 35:
 
@@ -263,6 +273,7 @@ references, on several obsolete remarks and resolved problems and/or  conjecture
 
 69. тогда лучше убрать «объемлющего»
     С: или убрать $М$.
+    ЛП: убрать М  
 
 70. оставить --- вроде об этом был договор?
     С: Оставить
@@ -305,6 +316,10 @@ references, on several obsolete remarks and resolved problems and/or  conjecture
 
 82. лучше без страницы
     С: Я люблю, когда страница указана. Не настаиваю.
+    ЛП: эта фраза сама находится на с.63. Надо ли указывать страницу,
+    если речь идет о той же самой странице? 
+
+
     
 СТРАНИЦА 64:
 
@@ -323,6 +338,8 @@ references, on several obsolete remarks and resolved problems and/or  conjecture
   publisher={Springer}
 }
 
+
+
 СТРАНИЦА 65:
 
 85. можно убрать слово «фундаментальная» и всё станет однозначно.
@@ -331,7 +348,9 @@ references, on several obsolete remarks and resolved problems and/or  conjecture
 
 86. С: Заменить
     "фундаментальную группу группы Ham(M, Ω)" -> "группу π_1 Ham(M, Ω)"?
-    
+     LP: группу π_1 (Ham(M, Ω)) -нужны скобки 
+
+
 87. оставить
 
 7.2.A-B
@@ -403,6 +422,7 @@ references, on several obsolete remarks and resolved problems and/or  conjecture
 
 107. ок или К. Ф. Зибург?
      С: ок
+     ЛП: К.Ф. Зибург
 
 108. вроде он --- Mather, John Norman?
      С: ок
@@ -519,7 +539,7 @@ references, on several obsolete remarks and resolved problems and/or  conjecture
 
 139. вроде так правильней?
      Да. В оригинале не вполне хорошо.
-     
+     ЛП: в переводе хорошо
 140. =139
 
 СТРАНИЦА 94:
@@ -566,6 +586,8 @@ references, on several obsolete remarks and resolved problems and/or  conjecture
      С: Да.
      
 157. ок
+
+DOSHEL DO SYUDA LP.!!!
 
 СТРАНИЦА 99:
 
@@ -657,13 +679,16 @@ references, on several obsolete remarks and resolved problems and/or  conjecture
 
 Там же:
      С: Убрать l из второго слагаемого левой части.
+     ЛП: убрать l^1_0 из второго слагаемого в левой части.
+     Переставить 1 и 0 в пределы соответствующего интеграла.
+     Короче, вернуться к формуле из оригинала.
 
 СТРАНИЦА 113:
 
 Первое предложение:
      С: Правильнее "...если при каждой малой вариации...". Но в
      оригинале этого нет.
-
+     ЛП: точно, добавить "малой"
 187. ок
 
 СТРАНИЦА 114:
@@ -676,7 +701,8 @@ references, on several obsolete remarks and resolved problems and/or  conjecture
      С: Нет. Надо указать точку и время, хотя бы первый раз. Потом
      можно не писать. Я бы написал
      $C_{\pm}\big(t,f_{t\epsilon}(x_{pm})\big)$. 
-     
+     ЛП: В оригинале правильная формула.
+     Можно сделать обозначение C(...) более детальным.
 СТРАНИЦА 115:
 
 191. ок
@@ -756,6 +782,7 @@ references, on several obsolete remarks and resolved problems and/or  conjecture
 
 214. правильней = --- либо F=Ф, либо F(x)≡Ф(x)?
      С: Да. Я вообще не понимаю смысла ≡.
+     ЛП: = годится (три черты - "тождественно равно", наверное уже устарело) 
 
 215. лучше «точка», но тоже не очень подходит, может «уровень»?
      С: точка x+ является гомологически существенной.
@@ -821,6 +848,7 @@ references, on several obsolete remarks and resolved problems and/or  conjecture
 СТРАНИЦА 138:
 
 235. С: По-моему, не надо (t). Справа от \in стоит пр-во функций (от t).
+     ЛП: правда
      
 236. п.
 
@@ -863,6 +891,7 @@ references, on several obsolete remarks and resolved problems and/or  conjecture
 
 252. петля .. представима 
 + след. строчка Баньяга >> О. Баньяга (он Огастин Баньяга)
+
 
 253. петля .. гомотопна гамильтоновой.
 
@@ -908,3 +937,11 @@ references, on several obsolete remarks and resolved problems and/or  conjecture
      С: Да.
 
 268. пространства
+________________________
+
+ЛП: Эти статьи опубликованы. Вот ссылки:
+
+[Lem20] Lempert L. On the adjoint action of the group of symplectic diffeomorphisms. Pure and Applied Mathematics Quarterly. 2022 Apr;18(2):657-82.
+
+[PS21] Polterovich L, Shelukhin E. Lagrangian configurations and Hamiltonian maps. Compositio Mathematica. 2023 Dec;159(12):2483-520.
+
