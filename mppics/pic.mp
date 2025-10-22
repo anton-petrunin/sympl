@@ -453,6 +453,8 @@ label.rt(btex $\pi$ etex, .5[z.d0,z.d1]);
 label.lft(btex $j_0$ etex, point 0 of p4);
 label.rt(btex $j_1$ etex, point 1 of p4);
 label(btex {\large $\emptyset$} etex, .5[z.b,z.t]+ z.shift);
+label.lft(btex {\small $\frac{\pi^{-1}(j_0)}{\PSL(2,\CC)}$} etex, point .5 of p0);
+label.top(btex {\small $\pi^{-1}(\gamma)/\PSL(2,\CC)$} etex, point 1.6 of p10);
 endfig;
 
 beginfig(13) 
